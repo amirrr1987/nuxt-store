@@ -27,7 +27,7 @@ const TheFeature = () => {
     return list.map((item, index) => {
       return (
         <figure className="grid" key={index}>
-          <div className="bg-blue-500 aspect-square rounded-full m-12">
+          <div className="bg-blue-500 rounded-full m-12 w-10 m-auto flex justify-center items-center mb-4" style={{aspectRatio: 1/1}}>
             <Icon className="text-white text-2xl" icon={item.icon} />
           </div>
           <figcaption className="text-center">
