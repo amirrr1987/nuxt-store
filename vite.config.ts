@@ -7,5 +7,8 @@ export default defineConfig({
   plugins: [
     react(),
     WindiCSS()
-  ]
+  ],
+  server: {
+    port: 8080,
+  },
 })

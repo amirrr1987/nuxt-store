@@ -38,7 +38,7 @@ const Product = () => {
         <img
           className="mx-auto"
           src={`src/assets/images/items/${index + 1}.webp`}
-        />
+         alt="dfg" />
         <figcaption className="p-4 border-t">
           <div className="">$790.50</div>
           <p className="py-4">GoPro HERO6 4K Action Camera - Black</p>
