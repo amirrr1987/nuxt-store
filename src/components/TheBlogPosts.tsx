@@ -15,7 +15,7 @@ const TheBlogPosts = () => {
   const Cards = (): any => {
     return list.map((item: any, index: number) => {
       return (
-        <figure className="col-span-12 md:col-span-6 lg:col-span-3">
+        <figure className="col-span-12 md:col-span-6 lg:col-span-3" key={index}>
           <img
             style={{ aspectRatio: "3/2" }}
             className="aspect-3-2 rounded"

@@ -1,6 +1,6 @@
 const Checkout = () => {
   return (
-    <div className="shop-checkout">
+    <div className="shop-checkout py-12">
       <div className="container mx-auto px-8">
         <div className="grid grid-cols-12">
           <div className="bg-red-500 col-span-4">sdf</div>

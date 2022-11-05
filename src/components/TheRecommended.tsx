@@ -14,18 +14,7 @@ let list = [
   {
     title: "sdfsdf",
   },
-  {
-    title: "sdfsdf",
-  },
-  {
-    title: "sdfsdf",
-  },
-  {
-    title: "sdfsdf",
-  },
-  {
-    title: "sdfsdf",
-  },
+
 ];
 
 const Product = (): any => {
@@ -64,9 +53,7 @@ const TheNewProducts = () => {
   return (
     <section className="py-12">
       <div className="container mx-auto px-8">
-        <h3 className="text-2xl lg:text-3xl font-semibold mb-8">
-          New products
-        </h3>
+        <h3 className="text-2xl lg:text-3xl font-semibold mb-8">Recommended</h3>
         <div className="grid grid-cols-12 gap-8">
           <Product />
         </div>
