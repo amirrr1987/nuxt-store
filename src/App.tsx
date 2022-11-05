@@ -9,6 +9,7 @@ import Register from "./pages/TheRegister"
 import Signin from "./pages/TheSignin";
 import TheProductDetail from "./pages/TheProductDetail";
 import TheShoppingCart from "./pages/TheShoppingCart";
+import TheProductsList from "./pages/TheProductsList";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -27,6 +28,7 @@ function App() {
               element={<TheProductDetail />}
             ></Route>
             <Route path="/shopping-cart" element={<TheShoppingCart />}></Route>
+            <Route path="/products-list" element={<TheProductsList />}></Route>
           </Route>
           <Route path="/register" element={<Register />}></Route>
           <Route path="/signin" element={<Signin />}></Route>
