@@ -8,23 +8,23 @@ const TheCategories = () => {
       label: "tilew sdfsdf",
     },
     {
-      icon: "icon-park-outline:home",
+      icon: "icon-park-outline:like",
       label: "tilew sdfsdf",
     },
     {
-      icon: "icon-park-outline:home",
+      icon: "icon-park-outline:shopping",
       label: "tilew sdfsdf",
     },
     {
-      icon: "icon-park-outline:home",
+      icon: "icon-park-outline:log",
       label: "tilew sdfsdf",
     },
     {
-      icon: "icon-park-outline:home",
+      icon: "icon-park-outline:code",
       label: "tilew sdfsdf",
     },
     {
-      icon: "icon-park-outline:home",
+      icon: "icon-park-outline:github",
       label: "tilew sdfsdf",
     },
     {
@@ -73,7 +73,7 @@ const TheCategories = () => {
     return list.map((card: any, index: any) => {
       return (
         <div className="flex flex-col items-center justify-center" key={index}>
-          <Button type="default" icon={<Icon icon={card.icon} />} />
+          <Button type="default" className="!flex justify-center items-center" size="large" icon={<Icon icon={card.icon}  />} />
           <p>{card.label}</p>
         </div>
       );

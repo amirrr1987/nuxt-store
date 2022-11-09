@@ -1,15 +1,14 @@
 import { useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import TheAuth from "./views/TheAuth";
+import TheSignin from "./pages/auth/TheSignin";
+import TheRegister from "./pages/auth/TheRegister";
 import TheLandingPage from "./views/TheLandingPage";
 import TheHome from "./pages/TheHome";
-// import TheIndex2 from "./pages/TheIndex2";
-// import TheIndex3 from "./pages/TheIndex3";
-// import TheCheckout from "./components/TheCheckout";
-// import Register from "./pages/TheRegister"
-// import Signin from "./pages/TheSignin";
-// import TheProductDetail from "./pages/TheProductDetail";
-// import TheShoppingCart from "./pages/TheShoppingCart";
-// import TheProductsList from "./pages/TheProductsList";
+import TheProductDetail from "./pages/TheCheckout";
+import TheCheckout from "./pages/TheCheckout";
+import TheShoppingCart from "./pages/TheShoppingCart";
+import TheProductsList from "./pages/TheProductsList";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -20,15 +19,16 @@ function App() {
         <Routes>
           <Route path="/" element={<TheLandingPage />}>
             <Route path="/" element={<TheHome />}></Route>
-            {/* <Route path="/2" element={<TheIndex2 />}></Route>
-            <Route path="/3" element={<TheIndex3 />}></Route>
-            <Route path="/checkout" element={<TheCheckout />}></Route>
+            <Route path="/products-list" element={<TheProductsList />}></Route> 
             <Route path="/product-detail" element={<TheProductDetail />}></Route>
+            <Route path="/checkout" element={<TheCheckout />}></Route>
             <Route path="/shopping-cart" element={<TheShoppingCart />}></Route>
-            <Route path="/products-list" element={<TheProductsList />}></Route> */}
+ 
           </Route>
-          {/* <Route path="/register" element={<Register />}></Route>
-          <Route path="/signin" element={<Signin />}></Route> */}
+          <Route path="/auth" element={<TheAuth />}>
+            <Route path="/auth/signin" element={<TheSignin />}></Route>
+            <Route path="/auth/register" element={<TheRegister />}></Route>
+          </Route>
         </Routes>
       </Router>
     </div>

@@ -38,10 +38,9 @@ const Product = (): any => {
             </Button>
             <Button
               type="default"
-              className="rounded flex items-center justify-center"
-            >
-              <Icon icon="icon-park-outline:like" />
-            </Button>
+              className="rounded !flex items-center justify-center"
+              icon={<Icon icon="tabler:heart" />}
+            ></Button>
           </div>
         </figcaption>
       </figure>

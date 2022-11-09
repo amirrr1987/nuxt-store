@@ -1,6 +1,3 @@
-import { Dropdown, Menu, MenuItem, Input, Form, FormItem, Button } from "antd";
-import { Icon } from "@iconify/react";
-
 let list = [
   {
     title: "sdfsdf",

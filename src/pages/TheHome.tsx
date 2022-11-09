@@ -1,20 +1,20 @@
 // import { Button } from "antd";
 import { Fragment } from "react";
-import TheHeaderCard from "../components/TheHeader";
-import TheCategories from "../components/TheCategories";
-import TheNewProducts from "../components/TheNewproducts";
-import TheFeature from "../components/TheFeature";
-import TheBlogPosts from "../components/TheBlogPosts";
-import TheRecommended from "../components/TheRecommended";
-import TheRecentlyViewed from "../components/TheRecentlyViewed";
-import TheSubscribe from "../components/TheSubscribe";
+import TheSlider from "../components/landing/TheSlider";
+import TheCategories from "../components/landing/TheCategories";
+import TheNewProducts from "../components/landing/TheNewproducts";
+import TheFeature from "../components/landing/TheFeature";
+import TheBlogPosts from "../components/landing/TheBlogPosts";
+import TheRecommended from "../components/landing/TheRecommended";
+import TheRecentlyViewed from "../components/landing/TheRecentlyViewed";
+import TheSubscribe from "../components/landing/TheSubscribe";
 // import TheInfoCard from "../components/TheInfoCard";
 // import TheIntro from "../components/TheIntro";
 
 const TheHome = () => {
   return (
     <Fragment>
-      <TheHeaderCard />
+      <TheSlider />
       <TheCategories />
       <TheNewProducts />
       <TheFeature />

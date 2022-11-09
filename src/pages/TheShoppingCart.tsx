@@ -52,11 +52,15 @@ const TheShoppingCart = () => {
           <div className="flex items-center gap-x-4">
             <Button
               type="default"
+              className="!flex justify-center items-center"
               icon={<Icon icon="icon-park-outline:like" />}
             ></Button>
-            <Button type="default" danger>
-              Remove
-            </Button>
+            <Button
+              type="default"
+              danger
+              className="!flex justify-center items-center"
+              icon={<Icon icon="icon-park-outline:delete" />}
+            ></Button>
           </div>
         </div>
       );
@@ -70,11 +74,11 @@ const TheShoppingCart = () => {
             <h3>Your shopping cart</h3>
             <Items />
             <Divider />
-            <div>
+            <div className="flex items-center gap-x-3 mb-1 text-xl text-gray-500">
               <Icon icon="icon-park-outline:home" />
               <span> Free Delivery within 1-2 weeks</span>
             </div>
-            <p>
+            <p className="text-lg text-gray-500 font-light tracking-tight">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -86,6 +90,7 @@ const TheShoppingCart = () => {
               <Form layout="vertical">
                 <Form.Item label="Have coupon?">
                   <Input
+                    placeholder="Coupon code"
                     addonAfter={
                       <Button
                         type="text"
@@ -99,7 +104,36 @@ const TheShoppingCart = () => {
                 </Form.Item>
               </Form>
             </div>
-            <div className="p-4 bg-white rounded shadow row-span-2">sdf</div>
+            <div className="p-4 bg-white rounded shadow row-span-2">
+              <div className="flex justify-between">
+                <div>Total price:</div>
+                <div>$329.00</div>
+              </div>
+              <div className="flex justify-between">
+                <div>Discount:</div>
+                <div>- $60.00</div>
+              </div>
+              <div className="flex justify-between">
+                <div>TAX:</div>
+                <div>$14.00</div>
+              </div>
+              <Divider />
+              <div className="flex justify-between">
+                <div>Total:</div>
+                <div>$357.90</div>
+              </div>
+              <Button
+                size="large"
+                className="!rounded my-4"
+                type="primary"
+                block
+              >
+                Make Purchase
+              </Button>
+              <Button size="large" className="!rounded" type="default" block>
+                Back to shop
+              </Button>
+            </div>
           </div>
         </div>
       </div>
