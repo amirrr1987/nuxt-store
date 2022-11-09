@@ -1,5 +1,5 @@
 // import { Button } from "antd";
-import { Fragment } from "react";
+import { Fragment, useContext, useEffect } from "react";
 import TheSlider from "../components/landing/TheSlider";
 import TheCategories from "../components/landing/TheCategories";
 import TheNewProducts from "../components/landing/TheNewproducts";
@@ -10,8 +10,18 @@ import TheRecentlyViewed from "../components/landing/TheRecentlyViewed";
 import TheSubscribe from "../components/landing/TheSubscribe";
 // import TheInfoCard from "../components/TheInfoCard";
 // import TheIntro from "../components/TheIntro";
+import ListContext from "../stores/ListContext";
 
 const TheHome = () => {
+  const { posts, getPosts } = useContext(ListContext);
+
+  useEffect(() => {
+    getPosts();
+  }, []);
+
+  console.log(posts);
+  
+
   return (
     <Fragment>
       <TheSlider />
