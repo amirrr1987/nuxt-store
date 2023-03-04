@@ -1,6 +1,17 @@
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 import { Input, Button, Form } from "antd";
+import { LoginApi } from "../../services";
 const signin = () => {
+  const [phone, setPhone] = useState()
+  const [password, setPassword] = useState()
+  const loginHandler = async () => {
+    // console.log(phone);
+    const {data} = await LoginApi({ phone: phone, password: password })
+    
+    console.log('data',data.data);
+    
+
+  }
   return (
     <div className="shop-signin h-screen flex justify-center items-center bg-gray-100">
       <div className="container mx-auto px-8">
@@ -12,15 +23,17 @@ const signin = () => {
             alt="sdf"
           />
           <Form.Item
-            label="email"
-            name="email"
+            label="phone"
+            name="phone"
             rules={[{ required: true, message: "Please input your email!" }]}
           >
             <Input
-              type="email"
-              id="email"
-              placeholder="name@flowbite.com"
+              type="tel"
+              id="phone"
+              placeholder="+989198881400"
               required
+              value={phone}
+              onInput={event => setPhone(event.target.value)}
             />
           </Form.Item>
           <Form.Item
@@ -28,10 +41,12 @@ const signin = () => {
             name="password"
             rules={[{ required: true, message: "Please input your password!" }]}
           >
-            <Input type="password" id="password" required />
+            <Input type="password" id="password" required
+              value={password}
+              onInput={event => setPassword(event.target.value)} />
           </Form.Item>
           <div className="grid grid-cols-2 gap-x-16 px-8">
-            <Button type="primary">Signin</Button>
+            <Button type="primary" onClick={loginHandler}>Signin</Button>
             <Button type="default">Register</Button>
           </div>
         </Form>
