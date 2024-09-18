@@ -10,11 +10,14 @@ export default defineNuxtConfig({
     "@vueuse/nuxt",
     "nuxt-typed-router",
     "nuxt-lodash",
-    '@primevue/nuxt-module'
+    "@primevue/nuxt-module",
   ],
   primevue: {
     options: {
-      unstyled: true
-    }
-  }
+      unstyled: true,
+    },
+  },
+  image: {
+    domains: ["fakestoreapi.com"],
+  },
 });
